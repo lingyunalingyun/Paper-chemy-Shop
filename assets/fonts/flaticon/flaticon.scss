@@ -1,0 +1,169 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?7fe3ebd41a25a58ee409a37685776e3f") format("truetype"),
+url("./flaticon.woff?7fe3ebd41a25a58ee409a37685776e3f") format("woff"),
+url("./flaticon.woff2?7fe3ebd41a25a58ee409a37685776e3f") format("woff2"),
+url("./flaticon.eot?7fe3ebd41a25a58ee409a37685776e3f#iefix") format("embedded-opentype"),
+url("./flaticon.svg?7fe3ebd41a25a58ee409a37685776e3f#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "appointment": "\f101",
+    "award": "\f102",
+    "boat-race": "\f103",
+    "boat": "\f104",
+    "credit-card": "\f105",
+    "customer-service": "\f106",
+    "delivery-truck": "\f107",
+    "diamond": "\f108",
+    "email": "\f109",
+    "guarantee": "\f10a",
+    "headphones": "\f10b",
+    "mail": "\f10c",
+    "message": "\f10d",
+    "node": "\f10e",
+    "pay": "\f10f",
+    "rating": "\f110",
+    "right-quote": "\f111",
+    "rope": "\f112",
+    "rudder": "\f113",
+    "sailing-boat": "\f114",
+    "search-1": "\f115",
+    "search": "\f116",
+    "security": "\f117",
+    "select": "\f118",
+    "ship-wheel": "\f119",
+    "ship": "\f11a",
+    "shopping-bag": "\f11b",
+    "speed": "\f11c",
+    "surfing": "\f11d",
+    "target": "\f11e",
+    "team": "\f11f",
+    "telephone": "\f120",
+    "trophy": "\f121",
+    "waves": "\f122",
+    "yacht-facing-right": "\f123",
+    "yachting": "\f124",
+);
+
+.flaticon-appointment:before {
+    content: map-get($flaticon-map, "appointment");
+}
+.flaticon-award:before {
+    content: map-get($flaticon-map, "award");
+}
+.flaticon-boat-race:before {
+    content: map-get($flaticon-map, "boat-race");
+}
+.flaticon-boat:before {
+    content: map-get($flaticon-map, "boat");
+}
+.flaticon-credit-card:before {
+    content: map-get($flaticon-map, "credit-card");
+}
+.flaticon-customer-service:before {
+    content: map-get($flaticon-map, "customer-service");
+}
+.flaticon-delivery-truck:before {
+    content: map-get($flaticon-map, "delivery-truck");
+}
+.flaticon-diamond:before {
+    content: map-get($flaticon-map, "diamond");
+}
+.flaticon-email:before {
+    content: map-get($flaticon-map, "email");
+}
+.flaticon-guarantee:before {
+    content: map-get($flaticon-map, "guarantee");
+}
+.flaticon-headphones:before {
+    content: map-get($flaticon-map, "headphones");
+}
+.flaticon-mail:before {
+    content: map-get($flaticon-map, "mail");
+}
+.flaticon-message:before {
+    content: map-get($flaticon-map, "message");
+}
+.flaticon-node:before {
+    content: map-get($flaticon-map, "node");
+}
+.flaticon-pay:before {
+    content: map-get($flaticon-map, "pay");
+}
+.flaticon-rating:before {
+    content: map-get($flaticon-map, "rating");
+}
+.flaticon-right-quote:before {
+    content: map-get($flaticon-map, "right-quote");
+}
+.flaticon-rope:before {
+    content: map-get($flaticon-map, "rope");
+}
+.flaticon-rudder:before {
+    content: map-get($flaticon-map, "rudder");
+}
+.flaticon-sailing-boat:before {
+    content: map-get($flaticon-map, "sailing-boat");
+}
+.flaticon-search-1:before {
+    content: map-get($flaticon-map, "search-1");
+}
+.flaticon-search:before {
+    content: map-get($flaticon-map, "search");
+}
+.flaticon-security:before {
+    content: map-get($flaticon-map, "security");
+}
+.flaticon-select:before {
+    content: map-get($flaticon-map, "select");
+}
+.flaticon-ship-wheel:before {
+    content: map-get($flaticon-map, "ship-wheel");
+}
+.flaticon-ship:before {
+    content: map-get($flaticon-map, "ship");
+}
+.flaticon-shopping-bag:before {
+    content: map-get($flaticon-map, "shopping-bag");
+}
+.flaticon-speed:before {
+    content: map-get($flaticon-map, "speed");
+}
+.flaticon-surfing:before {
+    content: map-get($flaticon-map, "surfing");
+}
+.flaticon-target:before {
+    content: map-get($flaticon-map, "target");
+}
+.flaticon-team:before {
+    content: map-get($flaticon-map, "team");
+}
+.flaticon-telephone:before {
+    content: map-get($flaticon-map, "telephone");
+}
+.flaticon-trophy:before {
+    content: map-get($flaticon-map, "trophy");
+}
+.flaticon-waves:before {
+    content: map-get($flaticon-map, "waves");
+}
+.flaticon-yacht-facing-right:before {
+    content: map-get($flaticon-map, "yacht-facing-right");
+}
+.flaticon-yachting:before {
+    content: map-get($flaticon-map, "yachting");
+}
