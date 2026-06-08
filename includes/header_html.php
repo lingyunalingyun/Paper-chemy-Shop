@@ -110,9 +110,9 @@ $header_user = shop_current_user($conn);
                     <div class="col-lg-5 col-md-7 d-xs-none">
                         <div class="main-menu-search">
                             <div class="navbar-search search-style-5">
-                                <form action="/product-grids.php" method="get">
-                                    <div class="search-input">
-                                        <input type="text" name="q" value="<?= htmlspecialchars($_GET['q'] ?? '') ?>" placeholder="搜索商品">
+                                <form action="/product-grids.php" method="get" style="display:flex;align-items:stretch;gap:0;width:100%;">
+                                    <div class="search-input" style="flex:1;">
+                                        <input type="text" name="q" value="<?= htmlspecialchars($_GET['q'] ?? '') ?>" placeholder="搜索商品" style="width:100%;">
                                     </div>
                                     <div class="search-btn">
                                         <button type="submit"><i class="lni lni-search-alt"></i></button>
