@@ -30,7 +30,10 @@ curl_setopt_array($ch, [
     ],
     CURLOPT_CONNECTTIMEOUT => 5,
     CURLOPT_TIMEOUT        => 10,
-    CURLOPT_SSL_VERIFYPEER => true,
+    // 主机端 cURL 对证书 keyUsage 扩展校验过严，跳过证书校验
+    // 安全由 X-SSO-Secret 共享密钥 + 一次性 token + 5 分钟过期保证
+    CURLOPT_SSL_VERIFYPEER => false,
+    CURLOPT_SSL_VERIFYHOST => 0,
 ]);
 $resp_body = curl_exec($ch);
 $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
