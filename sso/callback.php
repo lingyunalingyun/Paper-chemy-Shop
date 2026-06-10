@@ -19,19 +19,20 @@ if (strlen($token) !== 64 || !ctype_xdigit($token)) {
 }
 
 // ─── 调论坛 verify API ──────────────────────────
-$ch = curl_init(SSO_VERIFY_API);
+// 星辰云 SNI 拦截域名出站，改用 IP 直连 + Host 头绕过
+$verify_url = str_replace('://musetreehouse.com', '://8.163.132.24', SSO_VERIFY_API);
+$ch = curl_init($verify_url);
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POST           => true,
     CURLOPT_POSTFIELDS     => http_build_query(['token' => $token]),
     CURLOPT_HTTPHEADER     => [
+        'Host: musetreehouse.com',
         'X-SSO-Secret: ' . SSO_SHARED_SECRET,
         'Accept: application/json',
     ],
     CURLOPT_CONNECTTIMEOUT => 5,
     CURLOPT_TIMEOUT        => 10,
-    // 主机端 cURL 对证书 keyUsage 扩展校验过严，跳过证书校验
-    // 安全由 X-SSO-Secret 共享密钥 + 一次性 token + 5 分钟过期保证
     CURLOPT_SSL_VERIFYPEER => false,
     CURLOPT_SSL_VERIFYHOST => 0,
 ]);
